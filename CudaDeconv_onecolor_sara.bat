@@ -5,7 +5,7 @@ rem ************************************* one color, copy whole module for anoth
 
 rem select PSF directory
 SET PSFsPath="Y:\Sara Kacmoli\Data\20240321_Calibration"
-SET PSFfile1=488PSF_NBessel_NA0p4_na0p36_CF_6_EF_0_100nmStep.tif
+SET PSFfile1=488PSF_NBessel_NA0p4_na0p36_CF_6_EF_0_100nmStep_cropped.tif
 
 SET PSF_input1=%PSFsPath%\%PSFfile1%
 
@@ -28,16 +28,16 @@ SET medium_index=1.3333
 SET xypixel_PSF=0.108
 SET zpixel_PSF=0.1
 SET origin=0
-SET bg=111
+SET bg=102
 SET OTF_Option=--background %bg% --xyres %xypixel_PSF% --zres %zpixel_PSF% --fixorigin %origin% --na %NAdet% --nimm %medium_index%
 
 rem deconv parameter
 SET xypixel_image=0.108
 SET zpixel_image=0.3
 SET iter=15
-SET deskew_angle=-32.4
+SET deskew_angle=0.0
 SET rotate_angle=0.0
-SET image_bg=151
+SET image_bg=105
 rem SET crop_size=1 256 1 1200 0 250
 SET padding_size=20
 SET MIPdir=0 0 1
